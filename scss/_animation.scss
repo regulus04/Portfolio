@@ -1,0 +1,33 @@
+@keyframes scrollMessage {
+  0% { 
+    transform: translateX(0);
+  }
+  100% { 
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes circleAnime {
+  50% {
+    width: 150px;
+    height: 150px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes panelOpen {
+  100% {
+    transform: rotateX(0) translate3d(0, 0, 0);
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes panelOpenNoTop {
+  100% {
+    transform: rotateX(0);
+  }
+}

@@ -13,163 +13,188 @@
       href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
     <title>Yodai Kadokawa | Front-end Dev</title>
   </head>
   <body>
-    <!-- Header -->
-    <header id="header-home">
-      <div class="container">
-        <nav id="main-nav">
-          <img id="logo" src="img/logo.png" alt="My Portfolio" />
-          <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="about.html" class="">About</a></li>
-            <li><a href="work.html" class="">Work</a></li>
-            <li><a href="contact.html" class="">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-content">
-          <h1>I Am Yodai The <span class="txt-type" data-wait="3000" data-words='["Front-end Dev", "Engineer", "Musician"]'></span></h1>
-          <p class="lead">I speciralize in Front-end development</p>
-          <a href="work.html" class="btn-light">View My Work</a>
-        </div>
-      </div>
-    </header>
 
-    <!-- Section A -->
-    <section id="home-a" class="text-center py-2">
-      <div class="container">
-        <h2 class="section-title">I Specialize In</h2>
-        <div class="bottom-line"></div>
-        <p class="lead">
-          Front-end engineer creating websites and desktop applications with HTML, CSS, Javascript
-        </p>
-        <div class="specials">
-          <div>
-            <i class="fas fa-file-alt fa-2x"></i>
-            <h3>Concepting</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis reiciendis esse possimus animi eligendi fuga nihil tempora numquam delectus velit?</p>
-          </div>
-          <div>
-            <i class="fas fa-desktop fa-2x"></i>
-            <h3>UI/UX</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis reiciendis esse possimus animi eligendi fuga nihil tempora numquam delectus velit?</p>
-          </div>
-          <div>
-            <i class="fas fa-object-ungroup fa-2x"></i>
-            <h3>Visual Design</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis reiciendis esse possimus animi eligendi fuga nihil tempora numquam delectus velit?</p>
-          </div>
-          <div>
-            <i class="fas fa-thumbs-up fa-2x"></i>
-            <h3>Interaction</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis reiciendis esse possimus animi eligendi fuga nihil tempora numquam delectus velit?</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Nav bar -->
+    <nav id="main-nav">
+      <img id="logo" src="img/logo.png" alt="My Portfolio" />
+      <ul>
+        <li><a href="index.html" class="current" id="home">Home</a></li>
+        <li><a href="about.html" class="" id="about">About</a></li>
+        <li><a href="work.html" class="" id="work">Work</a></li>
+        <li><a href="contact.html" class="" id="contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <!-- Section B -->
-    <section id="home-b" class="text-center py-2">
-      <div class="stats">
-        <div>
-          <ul>
-            <li><i class="fas fa-users fa-3x"></i></li>
-            <li class="stats-title">Clients</li>
-            <li class="stats-number">100</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li><i class="fas fa-award fa-3x"></i></li>
-            <li class="stats-title">Awards</li>
-            <li class="stats-number">3</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li><i class="fas fa-hourglass-start fa-3x"></i></li>
-            <li class="stats-title">Hourglass</li>
-            <li class="stats-number">3500</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li><i class="fas fa-code-branch fa-3x"></i></li>
-            <li class="stats-title">Project-completed</li>
-            <li class="stats-number">135</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- Nav bar invisible -->
+    <nav id="main-nav-invisible">
+      <img id="logo" src="img/logo.png" alt="My Portfolio" />
+      <ul>
+        <li><a href="index.html" class="current" id="in-home">Home</a></li>
+        <li><a href="about.html" class="" id="in-about">About</a></li>
+        <li><a href="work.html" class="" id="in-work">Work</a></li>
+        <li><a href="contact.html" class="" id="in-contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Nav bar background -->
+    <div id="nav-background"></div>
 
-    <!-- Section c -->
-    <section id="home-c" class="text-center py-2">
-      <div class="container">
-        <h2 class="section-title">
-          My Creative Process
-        </h2>
-        <div class="bottom-line"></div>
-        <p class="lead">
-          All of my UI/UX and design projects are based off of a practiced
-          formula to get the result that I am looking for
-        </p>
-        <div class="process">
-          <div>
-            <i class="fas fa-file-alt fa-4x process-icon my-2">
-              <div class="process-step">1</div>
-            </i>
-            <h3>Discuss The Project</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis atque laboriosam facere, inventore voluptas minus eaque nemo quis eum corrupti?</p>
+
+    <!-- Circle layer  -------------->
+    <div id="circle-layer">
+      <div id="circle-box">
+        <div id="circle"></div>
+      </div>
+    </div>
+
+    <!-- <div id="luxy"> -->
+
+    <!-- Header background photo -->
+    <div id="background-photo"></div>
+
+    <!-- Main Content --------------------------->
+    <div id="main-container">
+      <!-- Section-1 -------->
+      <div id="section-1">
+        <!-- Header -->
+        <header id="header-home">
+          <div class="container">
+            <div class="header-content">
+              <h1>I Am Yodai The <span class="txt-type" data-wait="3000" data-words='["Front-end Dev", "Engineer", "Musician?"]'></span></h1>
+              <p class="lead">I speciralize in Front-end development</p>
+              <a href="work.html" class="btn-light">View My Work</a>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-desktop fa-4x process-icon my-2">
-              <div class="process-step">2</div>
-            </i>
-            <h3>Brainstorming ^ Concept</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              voluptas laborum repellendus dolorum! Harum, cupiditate.
-            </p>
+        </header>
+      </div>
+
+      <!-- About section -->
+      <div id="about-container">
+        <div id="about-content" class="flex-center">
+          <p>hello</p>
+        </div>
+
+      </div>
+
+      <!-- Section-2 ---------->
+      <div id="section-2" class="flex-center">
+        <p id="three-message">Hello</p>
+      </div>
+
+      <!-- Section-3 ---------->
+
+      <div id="section-3">
+        <div id="work-1">
+
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/newsgrid.png" alt="">
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+              </div>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-object-ungroup fa-4x process-icon my-2">
-              <div class="process-step">3</div>
-            </i>
-            <h3>UI/UX Planning</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              voluptas laborum repellendus dolorum! Harum, cupiditate.
-            </p>
+          <div id="scroll-message-box">
+            <div class="scroll-message" id="scroll-message-1">
+              <p>CSS layout for news website</p>
+              <p>CSS layout for news website</p>
+              <p>CSS layout for news website</p>
+              <p>CSS layout for news website</p>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-thumbs-up fa-4x process-icon my-2">
-              <div class="process-step">4</div>
-            </i>
-            <h3>Interaction</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              voluptas laborum repellendus dolorum! Harum, cupiditate.
-            </p>
+
+        </div>
+        <div id="work-2">
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/daily.png" alt="">
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+              </div>
+            </div>
+          </div>
+          <div id="scroll-message-box">
+            <div class="scroll-message" id="scroll-message-2">
+              <p>Desktop application</p>
+              <p>Desktop application</p>
+              <p>Desktop application</p>
+              <p>Desktop application</p>
+            </div>
+          </div>
+        </div>
+        <div id="work-3">
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/game.png" alt="">
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+              </div>
+            </div>
+          </div>
+          <div id="scroll-message-box">
+            <div class="scroll-message" id="scroll-message-3">
+              <p>Complicated JS for RPG game</p>
+              <p>Complicated JS for RPG game</p>
+              <p>Complicated JS for RPG game</p>
+              <p>Complicated JS for RPG game</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    
+
+      <!-- Section-4 ---------->
+      <div id="section-4" class="flex-center">
+        <div id="second-layer">
+          <p id="message">Please Check</p>
+          <p>for Phone</p>
+          <p>↓↓</p>
+          <div id='hidden-message'></div>
+        </div>
+      </div>
+
+    </div>
 
     <!-- Footer -->
     <footer id="main-footer">
       <div class="footer-content container">
         <p>Copyright &copy; 2020 All Rights Rerserved</p>
         <div class="social">
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-twitter" id="twitter"></i>
+          <i class="fab fa-facebook" id="facebook"></i>
+          <i class="fab fa-instagram" id="instagram"></i>
+          <i class="fab fa-linkedin" id="linkedin"></i>
+          <div id="social-invisible">
+            <i class="fab fa-twitter" id="in-twitter"></i>
+            <i class="fab fa-facebook" id="in-facebook"></i>
+            <i class="fab fa-instagram" id="in-instagram"></i>
+            <i class="fab fa-linkedin" id="in-linkedin"></i>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="js/typewriter.js"></script>
+    <!-- </div> -->
+    
+    <script src="../node_modules/luxy.js/dist/js/luxy.js" charset="utf-8"></script>
+    <script charset="utf-8">
+      luxy.init();
+    </script>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/typewriter.js"></script>
   </body>
 </html>

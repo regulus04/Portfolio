@@ -107,6 +107,7 @@ input[class^='btn-']:hover {
   text-align: center;
   font-weight: 100;
   text-transform: uppercase;
+  color: white;
 }
 
 .bottom-line {
@@ -115,5 +116,12 @@ input[class^='btn-']:hover {
   background: $main-color;
   display: block;
   margin: 0 auto 1rem auto;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
