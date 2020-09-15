@@ -324,7 +324,7 @@ img {
   height: 100vh;
   top: 0;
   position: fixed;
-  background: url(/dist/img/showcase.jpg) center center/cover;
+  background: url(../img/showcase.jpg) center center/cover;
   z-index: -1; }
 
 #main-container {
@@ -349,7 +349,7 @@ img {
             font-size: 4rem;
             line-height: 1.2; }
       #main-container #section-1 #header-inner {
-        background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
+        background: url(../img/showcase.jpg) no-repeat 20% 30%/cover;
         height: 5.5rem;
         border-bottom: 3px solid #ffbc00; }
   #main-container #switch-lang {
@@ -582,7 +582,7 @@ img {
           transform: rotate(45deg);
           transition: width 0.2s, height 0.2s, opacity 0.2s; }
     #main-container #section-4 #qr-code {
-      background: url(/dist/img/qr.png) center center/cover;
+      background: url(../img/qr.png) center center/cover;
       width: 100px;
       height: 100px;
       position: relative;
@@ -690,7 +690,7 @@ img {
     margin-right: 0.5rem; }
 
 #header-inner {
-  background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
+  background: url(../img/showcase.jpg) no-repeat 20% 30%/cover;
   height: 5.5rem;
   border-bottom: 3px solid #ffbc00; }
 

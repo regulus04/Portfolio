@@ -96,8 +96,8 @@ function mouse(e){
   mouseY = e.clientY;
   
 
-  circleBox.style.top = `${mouseY - 100}px`;
-  circleBox.style.left = `${mouseX - 100}PX`;
+  circleBox.style.top = `${mouseY - 125}px`;
+  circleBox.style.left = `${mouseX - 125}px`;
 }
 
 // Scroll event /////////////////////////////////////
@@ -172,13 +172,14 @@ function scroll(){
   let m5 = 'and so on...';
   let tM = threeM.textContent;
   
+
   if(scrollY == 0){
     threeM.textContent = m1;
   }
   if(scrollY <= windowH * 2.8 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
     type.effect(threeM, m1, 100);
   }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
-    type.effect(threeM, m2, 100);
+    type.effect(threeM, m2, 70);
   }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 3.9 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
     type.effect(threeM, m3, 100);
   }else if(scrollY > windowH * 3.9 && scrollY <= windowH * 4.3 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
