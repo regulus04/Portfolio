@@ -22,12 +22,36 @@ export class Animation {
     target.style.display = 'none';
   }
 
+  switchShow(target){
+    target.style.right = '1rem';
+  }
+  switchHide(target){
+    target.style.right = '-3rem';
+  }
+  
+  actCircle(target){
+    target.style.strokeDashoffset = '0';
+  }
+  closeCircle(target){
+    target.style.strokeDashoffset = '63';
+  }
+
   panelNoTopOpen(target){
     target.style.display = 'block';
     target.style.animationPlayState = 'running';
   }
   panelNoTopClose(target){
     target.style.display = 'none';
+  }
+
+  // Bar Length
+  barLengthen(target1, target2, target3, target4, target5, target6){
+    target1.style.width = "100%";
+    target2.style.width = "90%";
+    target3.style.width = "80%";
+    target4.style.width = "80%";
+    target5.style.width = "40%";
+    target6.style.width = "100%";
   }
 
   navHover(target){

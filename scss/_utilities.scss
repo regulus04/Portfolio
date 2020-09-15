@@ -110,12 +110,30 @@ input[class^='btn-']:hover {
   color: white;
 }
 
+.section-title-black {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: black;
+}
+
 .bottom-line {
   height: 2px;
   width: 3rem;
   background: $main-color;
   display: block;
   margin: 0 auto 1rem auto;
+}
+
+.bottom-line-short {
+  height: 2px;
+  width: 2rem;
+  background: $main-color;
+  display: block;
+  margin: 0.5rem auto 1rem auto;
 }
 
 .flex-center {

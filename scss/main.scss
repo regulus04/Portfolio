@@ -15,6 +15,8 @@ body {
   // font-family: 'Karla', sans-serif;
   line-height: 1.6;
   background: #fff;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
 }
 
 a {
@@ -219,9 +221,78 @@ img {
   }
 
   // About cantainer
+
+  #switch-lang {
+    width: 3rem;
+    height: 10rem;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 40vh;
+    right: -3rem;
+    z-index: 2;
+    // border-left: 3px $main-color solid;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    transition: right 1s;
+    
+    p {
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    #circle-2 {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      left: -0.6rem;
+      top: -6rem;
+
+      svg circle {
+        stroke: $main-color;
+        transform: translate(5px, 5px);
+        stroke-width: 2;
+        fill: transparent;
+        stroke-dasharray: 63;
+        stroke-dashoffset: 63;
+        transition: stroke-dashoffset 0.3s;
+    
+        // &:hover {
+        //   stroke-dashoffset: 0;
+        // }
+      }
+    }
+
+    #circle-3 {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      left: -0.6rem;
+      top: 0.5rem;
+
+      svg circle {
+        stroke: $main-color;
+        transform: translate(5px, 5px);
+        stroke-width: 2;
+        fill: transparent;
+        stroke-dasharray: 63;
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 0.3s;
+    
+        // &:hover {
+        //   stroke-dashoffset: 0;
+        // }
+      }
+    }
+  }
+
   #about-container {
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
     background: black;
     border-bottom: 2px white solid;
     display: flex;
@@ -229,30 +300,69 @@ img {
     justify-content: center;
     align-items: center;
     perspective: 1000px;
+    overflow: hidden;
 
-    #about-content {
-      position: relative;
-      width: 300px;
+    #about-title {
+      margin-bottom: 1rem;
+    }
+
+    #about-profile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 70%;
       height: 300px;
-      background: red;
-      // transform-style: preserve-3d;
-      // transform: rotateX(-90deg) translate3d(0, -50%, 0);
-      transform: rotateX(-90deg);
-      // perspective: 50em;
-      // transform-origin: 50% 0%;
-      transform-origin: top;
-      // transform: rotateX(-98.5deg);
-      // top: -150px;
-      opacity: 0;
-      animation-name: panelOpen;
-      animation-duration: 1.5s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      animation-play-state: paused;
+      margin-bottom: 1rem;
 
-      // &:hover {
-      //   transform: rotateX(-90deg);
-      // }
+      #about-photo {
+        position: relative;
+        width: 25vw;
+        height: 300px;
+        background: url('../img/IMGP4842.jpg') center center / cover;
+        // transform-style: preserve-3d;
+        // transform: rotateX(-90deg) translate3d(0, -50%, 0);
+        transform: rotateX(-90deg);
+        // perspective: 50em;
+        // transform-origin: 50% 0%;
+        transform-origin: top;
+        // transform: rotateX(-98.5deg);
+        // top: -150px;
+        opacity: 0;
+        animation-name: panelOpen;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+  
+        // &:hover {
+        //   transform: rotateX(-90deg);
+        // }
+      }
+
+      #about-texts {
+        width: 40vw;
+        height: 300px;
+        position: relative;
+        padding: 0 1rem;
+        background: $medium-color;
+        border-left: 5px $main-color solid;
+        color: $dark-color;
+        transform: rotateX(-90deg);
+        transform-origin: top;
+        opacity: 0;
+        animation-name: panelOpen;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+      }
+    }
+
+
+
+    #about-bars-container {
+      width: 80%;
+      color: white;
     }
   }
 
@@ -270,9 +380,14 @@ img {
     position: sticky;
     top: 0;
 
-    #three-message {
-      position: relative;
-      transition: left 0.5s;
+    #flexible-message-box {
+      width: 50vw;
+      text-align: center;
+
+      #three-message {
+        position: relative;
+        transition: left 0.5s;
+      }
     }
   }
 
@@ -394,7 +509,7 @@ img {
       height: 100%;
       position: absolute;
       background: black;
-      font-size: 5rem;
+      font-size: 3rem;
       color: white;
       display: flex;
       flex-direction: column;
@@ -407,6 +522,41 @@ img {
     }
 
     #hidden-message {
+      position: relative;
+    }
+
+    #corners {
+      width: 200px;
+      height: 200px;
+      background: transparent;
+      position: absolute;
+      left: -50px;
+      top: -50px;
+      overflow: hidden;
+      opacity: 0;
+      transition: width 0.2s, height 0.2s, top 0.2s,left 0.2s, opacity 0.2s;
+    
+      #border-box {
+        width: 196px;
+        height: 196px;
+        border: 2px $main-color solid;
+        transition: width 0.2s, height 0.2s, opacity 0.2s;
+    
+        #inner-box-1 {
+          width: 220px;
+          height: 220px;
+          background: black;
+          // background: red;
+          position: absolute;
+          left: -10px;
+          top: -10px;
+          transform: rotate(45deg);
+          transition: width 0.2s, height 0.2s, opacity 0.2s;
+        }
+      }
+    }
+
+    #qr-code {
       background: url(/dist/img/qr.png) center center / cover;
       width: 100px;
       height: 100px;
@@ -429,8 +579,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -444,8 +594,8 @@ img {
   
     #circle {
       mix-blend-mode: difference;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       background: white;
       border-radius: 50%;
       /* z-index: -10 !important; */
@@ -504,13 +654,17 @@ img {
           color: $main-color;
           margin: 1rem;
         }
+
+      img {
+        width: 100%;
+      }
     }
 
   }
   // About B
   &-b {
     .progress {
-      overflow:hidden;
+      overflow: hidden;
       height: 20px;
       background: $medium-color;
       border-radius: 5px;
@@ -519,6 +673,7 @@ img {
       div {
         height: 100%;
         color: #fff;
+        transition: width 3s;
         text-align: center;
         background: $main-color;
       }
@@ -568,6 +723,46 @@ img {
     }
   }
 }
+
+// Work
+#header-inner {
+  background: $bg-image no-repeat 20% 30% / cover;
+  height: 5.5rem;
+  border-bottom: 3px solid $main-color;
+}
+
+#work-main-nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+
+  }
+}
+
 
 // Contact Page
 #contact {

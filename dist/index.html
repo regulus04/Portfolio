@@ -21,10 +21,10 @@
 
     <!-- Nav bar -->
     <nav id="main-nav">
-      <img id="logo" src="img/logo.png" alt="My Portfolio" />
+      <img id="logo" src="img/YKlogo.png" alt="My Portfolio" />
       <ul>
         <li><a href="index.html" class="current" id="home">Home</a></li>
-        <li><a href="about.html" class="" id="about">About</a></li>
+        <!-- <li><a href="" class="" id="about">About</a></li> -->
         <li><a href="work.html" class="" id="work">Work</a></li>
         <li><a href="contact.html" class="" id="contact">Contact</a></li>
       </ul>
@@ -35,7 +35,7 @@
       <img id="logo" src="img/logo.png" alt="My Portfolio" />
       <ul>
         <li><a href="index.html" class="current" id="in-home">Home</a></li>
-        <li><a href="about.html" class="" id="in-about">About</a></li>
+        <!-- <li><a href="" class="" id="in-about">About</a></li> -->
         <li><a href="work.html" class="" id="in-work">Work</a></li>
         <li><a href="contact.html" class="" id="in-contact">Contact</a></li>
       </ul>
@@ -67,23 +67,89 @@
             <div class="header-content">
               <h1>I Am Yodai The <span class="txt-type" data-wait="3000" data-words='["Front-end Dev", "Engineer", "Musician?"]'></span></h1>
               <p class="lead">I speciralize in Front-end development</p>
-              <a href="work.html" class="btn-light">View My Work</a>
+              <a href="" class="btn-light" id="about-me">About Me</a>
             </div>
           </div>
         </header>
       </div>
 
-      <!-- About section -->
+      <!-- About section ------------->
+
       <div id="about-container">
-        <div id="about-content" class="flex-center">
-          <p>hello</p>
+        <div id="about-title">
+          <h2 class="section-title">About Me</h2>
+          <div class="bottom-line"></div>
+        </div>
+
+        <div id="about-profile">
+          <div id="photo-panel-box">
+            <div id="about-photo" class="flex-center"></div>
+          </div>
+          <div id="text-panel-box">
+            <div id="about-texts">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias tempore cum atque tenetur iusto cupiditate id labore sequi provident.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="switch-lang">
+          <p id='lang-jp'>日本語</p>
+          <div id="circle-2">
+            <svg width='30px' height='30px' viewBox='0 0 30 30'>
+              <circle cx='10' cy='10' r='10' id="circle-jp"></circle>
+            </svg>
+          </div>
+          <div class="bottom-line-short"></div>
+          <p id='lang-en'>English</p>
+          <div id="circle-3">
+            <svg width='30px' height='30px' viewBox='0 0 30 30'>
+              <circle cx='10' cy='10' r='10' id="circle-en"></circle>
+            </svg>
+          </div>
+        </div>
+
+        <div id="about-bars-container">
+          <!-- Section B: Progress Bar -->
+          <section id="about-b" class="py-3">
+            <div class="container">
+              <h2 class="section-title">Technical Skills</h2>
+              <div class="bottom-line"></div>
+              <h4>HTML: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-1"></div>
+              </div>
+              <h4>CSS: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-2"></div>
+              </div>
+              <h4>Javascript: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-3"></div>
+              </div>
+              <h4>English: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-4"></div>
+              </div>
+              <h4>Adobe CC: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-5"></div>
+              </div>
+              <h4>Music: </h4>
+              <div class="progress">
+                <div style="width:0%" id="progress-bar-6"></div>
+              </div>
+
+            </div>
+          </section>
         </div>
 
       </div>
 
       <!-- Section-2 ---------->
       <div id="section-2" class="flex-center">
-        <p id="three-message">Hello</p>
+        <div id="flexible-message-box">
+          <p id="three-message">What I can do is</p>
+        </div>
       </div>
 
       <!-- Section-3 ---------->
@@ -98,7 +164,7 @@
             <div class="item-text">
               <div class="item-text-wrap">
                 <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Great Gradients</h2>
+                <h2 class="item-text-title">Responsive layout</h2>
               </div>
             </div>
           </div>
@@ -119,8 +185,8 @@
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Great Gradients</h2>
+                <p class="item-text-category">System</p>
+                <h2 class="item-text-title">Data & Graph</h2>
               </div>
             </div>
           </div>
@@ -140,8 +206,8 @@
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Great Gradients</h2>
+                <p class="item-text-category">System</p>
+                <h2 class="item-text-title">RPG game</h2>
               </div>
             </div>
           </div>
@@ -160,10 +226,21 @@
       <!-- Section-4 ---------->
       <div id="section-4" class="flex-center">
         <div id="second-layer">
-          <p id="message">Please Check</p>
-          <p>for Phone</p>
+          <p id="message">You can check this</p>
+          <p>on your phone</p>
           <p>↓↓</p>
-          <div id='hidden-message'></div>
+
+          <div id="hidden-message">
+            <!-- square -->
+            <div id="corners" class="flex-row-center">
+              <div id="border-box" class="flex-row-center">
+                <div id="inner-box-1" class=""></div>
+              </div>
+            </div>
+  
+            <div id='qr-code'></div>
+          </div>
+
         </div>
       </div>
 
@@ -190,10 +267,10 @@
 
     <!-- </div> -->
     
-    <script src="../node_modules/luxy.js/dist/js/luxy.js" charset="utf-8"></script>
+    <!-- <script src="../node_modules/luxy.js/dist/js/luxy.js" charset="utf-8"></script>
     <script charset="utf-8">
       luxy.init();
-    </script>
+    </script> -->
     <script src="./js/main.js" type="module"></script>
     <script src="./js/typewriter.js"></script>
   </body>
