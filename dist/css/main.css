@@ -884,6 +884,24 @@ img {
     #main-container #about-container #switch-lang .bottom-line-short {
       width: 1rem; } }
 
+@media (max-height: 700px) {
+  #main-container #about-container #about-profile {
+    height: 400px; }
+    #main-container #about-container #about-profile #about-photo {
+      height: 100px; }
+    #main-container #about-container #about-profile #about-texts {
+      height: 250px; }
+  #main-container #about-container #about-bars-container {
+    height: 40vh; }
+    #main-container #about-container #about-bars-container #about-b {
+      padding-top: 0;
+      padding-bottom: 0; }
+    #main-container #about-container #about-bars-container .progress {
+      height: 10px;
+      margin-bottom: 0.1rem; }
+    #main-container #about-container #about-bars-container h4 {
+      font-size: 0.8rem; } }
+
 @media (max-height: 580px) {
   #header-home .header-content {
     padding-top: 3rem; } }
