@@ -6,7 +6,8 @@ import { Animation } from './Animation.js';
 // message
 // language
 // mobile
-// logo
+
+console.log(window.innerWidth);
 
 const navBG = document.querySelector('#nav-background');
 const circleLayer = document.querySelector('#circle-layer');
@@ -160,7 +161,7 @@ function scroll(){
   }
 
   // Bar Lengthening
-  if(scrollY > windowH * 1.2){
+  if(scrollY > windowH * 1.1){
     anime.barLengthen(progressBar1, progressBar2, progressBar3, progressBar4, progressBar5, progressBar6);
   }
 
@@ -368,7 +369,6 @@ qr.addEventListener('mouseover', function(){
 
   innerBox1.style.width = '130px';
   innerBox1.style.height = '130px';
-  console.log('hellok')
 });
 
 qr.addEventListener('mouseleave', function(){

@@ -547,7 +547,7 @@ img {
       height: 100%;
       position: absolute;
       background: black;
-      font-size: 3rem;
+      font-size: 4rem;
       color: white;
       display: flex;
       flex-direction: column;
@@ -782,7 +782,11 @@ img {
   #header-home {
     height: 30rem; }
     #header-home .header-content {
-      padding-top: 5rem; } }
+      padding-top: 5rem; }
+  #section-3 .item-text-title {
+    font-size: 1.5rem; }
+  #section-3 .item-text-category {
+    font-size: 0.8rem; } }
 
 @media (max-width: 500px) {
   #work-main-nav, #main-nav {
@@ -834,7 +838,24 @@ img {
     #main-footer .footer-content {
       flex-direction: column;
       padding: 1rem;
-      height: 5rem; } }
+      height: 5rem; }
+  #nav-background {
+    height: 150px;
+    top: -150px; }
+  #main-container #about-container #about-title .section-title {
+    font-size: 1.5rem; }
+  #main-container #about-container #about-profile {
+    flex-direction: column;
+    align-items: center; }
+    #main-container #about-container #about-profile #about-photo {
+      width: 150px;
+      height: 150px; }
+    #main-container #about-container #about-profile #about-texts {
+      height: 120px; }
+  #main-container #about-container #about-bars-container .section-title {
+    font-size: 1.5rem; }
+  #main-container #about-container #about-bars-container .progress {
+    height: 10px; } }
 
 @media (max-height: 580px) {
   #header-home .header-content {

@@ -10,7 +10,11 @@ export class Animation {
     target.style.top = 0;
   }
   navBU(target){
-    target.style.top = '-100px';
+    if(window.innerWidth <= 500){
+      target.style.top = '-150px';
+    }else{
+      target.style.top = '-100px';
+    }
   }
 
   panelOpen(target){
