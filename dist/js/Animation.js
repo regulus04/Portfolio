@@ -11,7 +11,7 @@ export class Animation {
   }
   navBU(target){
     if(window.innerWidth <= 500){
-      target.style.top = '-150px';
+      target.style.top = '-110px';
     }else{
       target.style.top = '-100px';
     }
@@ -27,10 +27,18 @@ export class Animation {
   }
 
   switchShow(target){
-    target.style.right = '1rem';
+    if(window.innerWidth <= 500){
+      target.style.right = '0.3rem';
+    }else{
+      target.style.right = '1rem';
+    }
   }
   switchHide(target){
-    target.style.right = '-3rem';
+    if(window.innerWidth <= 500){
+      target.style.right = '-2rem';
+    }else{
+      target.style.right = '-3rem';
+    }
   }
   
   actCircle(target){

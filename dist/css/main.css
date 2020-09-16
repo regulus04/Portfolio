@@ -839,23 +839,49 @@ img {
       flex-direction: column;
       padding: 1rem;
       height: 5rem; }
+  #main-nav #logo {
+    width: 40px;
+    height: 40px; }
+  #main-nav ul {
+    font-size: 0.8rem; }
+    #main-nav ul li {
+      padding: 0.5rem 1rem; }
   #nav-background {
-    height: 150px;
-    top: -150px; }
+    height: 110px;
+    top: -110px; }
   #main-container #about-container #about-title .section-title {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
+  #main-container #about-container #about-title .bottom-line {
+    margin-bottom: 0rem; }
   #main-container #about-container #about-profile {
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    height: 500px; }
     #main-container #about-container #about-profile #about-photo {
-      width: 150px;
+      width: 70vw;
       height: 150px; }
     #main-container #about-container #about-profile #about-texts {
-      height: 120px; }
+      height: 300px;
+      width: 60vw; }
   #main-container #about-container #about-bars-container .section-title {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   #main-container #about-container #about-bars-container .progress {
-    height: 10px; } }
+    height: 15px;
+    margin-bottom: 0.3rem; }
+  #main-container #about-container #about-bars-container h4 {
+    font-size: 0.8rem; }
+  #main-container #about-container #switch-lang {
+    width: 2rem;
+    height: 7rem;
+    right: -2rem; }
+    #main-container #about-container #switch-lang p {
+      font-size: 0.7rem; }
+    #main-container #about-container #switch-lang #circle-2 {
+      top: -4.5rem; }
+    #main-container #about-container #switch-lang #circle-3 {
+      top: 0.4rem; }
+    #main-container #about-container #switch-lang .bottom-line-short {
+      width: 1rem; } }
 
 @media (max-height: 580px) {
   #header-home .header-content {
