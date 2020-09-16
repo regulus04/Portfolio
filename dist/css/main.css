@@ -317,7 +317,8 @@ img {
   top: -100px;
   border-bottom: 2px solid white;
   z-index: 3;
-  transition: top 1s ease-out; }
+  transition: top 1s ease-out;
+  box-sizing: border-box; }
 
 #background-photo {
   width: 100vw;
