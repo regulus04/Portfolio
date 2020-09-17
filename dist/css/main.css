@@ -882,7 +882,20 @@ img {
     #main-container #about-container #switch-lang #circle-3 {
       top: 0.4rem; }
     #main-container #about-container #switch-lang .bottom-line-short {
-      width: 1rem; } }
+      width: 1rem; }
+  #main-container #section-2 {
+    font-size: 3rem; }
+  #main-container #section-3 #work-1, #main-container #section-3 #work-2, #main-container #section-3 #work-3 {
+    width: 70vw;
+    left: 15vw; }
+  #main-container #section-3 #work-1 {
+    top: -200px; }
+  #main-container #section-3 #work-2 {
+    top: 50px; }
+  #main-container #section-3 #work-3 {
+    top: 350px; }
+  #main-container #section-4 #second-layer {
+    font-size: 3rem; } }
 
 @media (max-height: 700px) {
   #main-container #about-container {
@@ -902,7 +915,20 @@ img {
         height: 10px;
         margin-bottom: 0.1rem; }
       #main-container #about-container #about-bars-container h4 {
-        font-size: 0.8rem; } }
+        font-size: 0.8rem; }
+  #main-container #section-2 {
+    font-size: 2.5rem; }
+  #main-container #section-3 #work-1, #main-container #section-3 #work-2, #main-container #section-3 #work-3 {
+    width: 60vw;
+    left: 20vw; }
+  #main-container #section-3 #work-1 {
+    top: -200px; }
+  #main-container #section-3 #work-2 {
+    top: 0px; }
+  #main-container #section-3 #work-3 {
+    top: 250px; }
+  #main-container #section-4 #second-layer {
+    font-size: 2.5rem; } }
 
 @media (max-height: 580px) {
   #header-home .header-content {
