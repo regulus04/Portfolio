@@ -206,7 +206,7 @@ function scroll(){
   
 
   // Open Work 1-3
-  if(scrollY > windowH * 2.1){
+  if(scrollY > windowH * 2.3){
     anime.panelNoTopOpen(work1);
   }
   if(scrollY > windowH * 3.2){
