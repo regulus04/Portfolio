@@ -40,6 +40,7 @@ const work3 = document.querySelector('#work-3');
 const SCM1 = document.querySelector('#scroll-message-1');
 const SCM2 = document.querySelector('#scroll-message-2');
 const SCM3 = document.querySelector('#scroll-message-3');
+const widthCheck = document.querySelector('#width-check');
 // Navbar
 const inNavBar = document.querySelector('#main-nav-invisible');
 const home = document.querySelector('#home');
@@ -143,10 +144,18 @@ function scroll(){
   photo.style.top = -scrollL + 'px';
   
   // Nav background Animation
-  if(scrollY > windowH * 0.9){
-    anime.navBD(navBG);
-  }else if(scrollY <= windowH * 0.9){
-    anime.navBU(navBG);
+  if(window.innerWidth < 500){
+    if(scrollY > windowH * 0.1){
+      anime.navBD(navBG);
+    }else if(scrollY <= windowH * 0.1){
+      anime.navBU(navBG);
+    }
+  }else{
+    if(scrollY > windowH * 0.9){
+      anime.navBD(navBG);
+    }else if(scrollY <= windowH * 0.9){
+      anime.navBU(navBG);
+    }
   }
 
   // Panel reaction
@@ -296,6 +305,7 @@ switchEn.addEventListener('click', () => {
 
 
 // Work 1 - 3 hover event 
+
 work1.addEventListener('mouseover', () => {
   anime.messageScrolling(SCM1);
 });
