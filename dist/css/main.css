@@ -455,6 +455,10 @@ img {
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-play-state: paused; }
+        #main-container #about-container #about-profile #about-texts #english-profile {
+          display: inline-block; }
+        #main-container #about-container #about-profile #about-texts #japanese-profile {
+          display: none; }
     #main-container #about-container #about-bars-container {
       width: 80%;
       color: white; }
@@ -828,14 +832,9 @@ img {
     grid-template-areas: 'bioimage' 'bio' 'aw1' 'aw2' 'aw3'; }
   #about-c {
     display: none; }
-  #contact-a .container {
+  #contact-a .text-fields {
+    grid-template-areas: 'name' 'subject' 'email' 'phone' 'message';
     width: 80vw; }
-    #contact-a .container form {
-      width: 80vw; }
-      #contact-a .container form .text-fields {
-        grid-template-areas: 'name' 'subject' 'email' 'phone' 'message';
-        width: 80vw;
-        overflow: hidden; }
   #contact-b div {
     margin-bottom: 1rem;
     padding-bottom: 1rem;

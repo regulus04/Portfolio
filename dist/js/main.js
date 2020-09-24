@@ -29,6 +29,8 @@ const switchJp = document.querySelector('#lang-jp')
 const circleJp = document.querySelector('#circle-jp')
 const switchEn = document.querySelector('#lang-en')
 const circleEn = document.querySelector('#circle-en')
+const jpProfile = document.querySelector('#japanese-profile')
+const enProfile = document.querySelector('#english-profile')
 
 // Work
 const qr = document.querySelector('#hidden-message');
@@ -462,6 +464,8 @@ switchJp.addEventListener('click', () => {
     lang = 'jp';
     anime.actCircle(circleJp);
     anime.closeCircle(circleEn);
+    enProfile.style.display = "none";
+    jpProfile.style.display = 'inline-block';
   }
 });
 switchEn.addEventListener('click', () => {
@@ -469,6 +473,8 @@ switchEn.addEventListener('click', () => {
     lang = 'en';
     anime.actCircle(circleEn);
     anime.closeCircle(circleJp);
+    jpProfile.style.display = 'none';
+    enProfile.style.display = "inline-block";
   }
 });
 
