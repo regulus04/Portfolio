@@ -193,11 +193,11 @@ function scroll(){
         type.effect(threeM, m1, 100);
       }else if(scrollY > windowH + 1100 && scrollY <= windowH + 1400 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
         type.effect(threeM, m2, 70);
-      }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1700 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
+      }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1900 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
         type.effect(threeM, m3, 100);
-      }else if(scrollY > windowH + 1700 && scrollY <= windowH + 1900 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
+      }else if(scrollY > windowH + 1900 && scrollY <= windowH + 2200 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
         type.effect(threeM, m4, 100);
-      }else if(scrollY > windowH + 1900 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
+      }else if(scrollY > windowH + 2200 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
         type.effect(threeM, m5, 100);
       }
   
@@ -236,18 +236,18 @@ function scroll(){
     // Scroll objects in different speed //////////
     if(windowW > 500){
   
-      if(scrollY > windowH * 2.6){
-        let range = scrollY - windowH * 2.5;
-        work1.style.top = -100 - range / 10 + 'px';
-      }
-      if(scrollY > windowH * 3.1){
-        let range = scrollY - windowH * 3;
-        work2.style.top = 300 - range / 2 + 'px';
-      }
-      if(scrollY > windowH * 3.2){
-        let range = scrollY - windowH * 3.6;
-        work3.style.top = 500 - range / 1.5 + 'px';
-      }
+      // if(scrollY > windowH * 2.6){
+      //   let range = scrollY - windowH * 2.5;
+      //   work1.style.top = -100 - range / 10 + 'px';
+      // }
+      // if(scrollY > windowH * 3.1){
+      //   let range = scrollY - windowH * 3;
+      //   work2.style.top = 300 - range / 2 + 'px';
+      // }
+      // if(scrollY > windowH * 3.2){
+      //   let range = scrollY - windowH * 3.6;
+      //   work3.style.top = 500 - range / 1.5 + 'px';
+      // }
       // Move messages to the sides 
       if(windowW < 500){
         threeM.style.left = "0";
@@ -257,11 +257,11 @@ function scroll(){
           threeM.style.left = 0;
         }else if(scrollY > windowH + 1100 && scrollY <= windowH + 1400){
           threeM.style.left = '25vw';
-        }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1700){
+        }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1900){
           threeM.style.left = '-20vw';
-        }else if(scrollY > windowH + 1700 && scrollY <= windowH + 1900){
+        }else if(scrollY > windowH + 1900 && scrollY <= windowH + 2200){
           threeM.style.left = '25vw';
-        }else if(scrollY > windowH + 1900){
+        }else if(scrollY > windowH + 2200){
           threeM.style.left = 0;
         }
       }
@@ -592,6 +592,12 @@ window.onresize = function windowSize(){
     work1.style.top = '-200px';
     work2.style.top = '5px';
     work3.style.top = '350px';
+  }
+
+  if(window.innerHeight < 700){
+    work1.style.top = '-100px';
+    work2.style.top = '200px';
+    work3.style.top = '500px';
   }
 
   console.log(work1.style.top);
