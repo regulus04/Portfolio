@@ -7,7 +7,6 @@ import { Animation } from './Animation.js';
 // language
 // mobile
 
-console.log(window.innerWidth);
 
 const navBG = document.querySelector('#nav-background');
 const circleLayer = document.querySelector('#circle-layer');
@@ -106,157 +105,327 @@ function mouse(e){
 window.addEventListener('scroll', scroll);
 function scroll(){
   let scrollY = document.documentElement.scrollTop;
-  if(scrollY >= windowH / 5 * 25 && scrollY <= windowH / 5 * 26){
 
-    let range = windowH / 5;
-    let x = scrollY - windowH / 5 * 25;
+  if(windowH < 700){
+    // For small window //////////////
+    if(scrollY >= windowH + 2600 && scrollY <= windowH + 2700){
 
-    circleBox.style.opacity = x / range;
-    circle.style.opacity = x / range;
-    circleBox.style.display = 'flex';
-
-    circleLayer.style.display = 'block';
-
-    // invisible nav bar cursor change
-    inNavBar.style.cursor = "none";
-    // inNavBar.style.display = "flex";
-
-  }else if(scrollY > windowH / 5 * 26){
-
-    circleBox.style.cursor = 'none';
-    circleBox.style.opacity = 1;
-    circle.style.opacity = 1;
-
-    qr.style.cursor = 'none';
-  }else if(scrollY < windowH / 5 * 25){
-    circleBox.style.display = 'none';
-    circleBox.style.cursor = 'normal';
-
-    circleLayer.style.display = 'none';
-
-    // invisible nav bar cursor change
-    inNavBar.style.cursor = "default";
-    // inNavBar.style.display = "none";
-  }
-
-  // Header Photo scroll
-  let scrollL = scrollY / 3;
-  photo.style.top = -scrollL + 'px';
+      let range = 100;
+      let x = scrollY - (windowH + 2600);
   
-  // Nav background Animation
-  if(window.innerWidth < 500){
-    if(scrollY > windowH * 0.1){
-      anime.navBD(navBG);
-    }else if(scrollY <= windowH * 0.1){
-      anime.navBU(navBG);
+      circleBox.style.opacity = x / range;
+      circle.style.opacity = x / range;
+      circleBox.style.display = 'flex';
+  
+      circleLayer.style.display = 'block';
+  
+      // invisible nav bar cursor change
+      inNavBar.style.cursor = "none";
+      // inNavBar.style.display = "flex";
+  
+    }else if(scrollY > windowH + 2700){
+  
+      circleBox.style.cursor = 'none';
+      circleBox.style.opacity = 1;
+      circle.style.opacity = 1;
+  
+      qr.style.cursor = 'none';
+    }else if(scrollY < windowH + 2600){
+      circleBox.style.display = 'none';
+      circleBox.style.cursor = 'normal';
+  
+      circleLayer.style.display = 'none';
+  
+      // invisible nav bar cursor change
+      inNavBar.style.cursor = "default";
+      // inNavBar.style.display = "none";
     }
+  
+    // Header Photo scroll
+    let scrollL = scrollY / 3;
+    photo.style.top = -scrollL + 'px';
+    
+    // Nav background Animation
+    if(windowW < 500){
+      if(scrollY > windowH * 0.1){
+        anime.navBD(navBG);
+      }else if(scrollY <= windowH * 0.1){
+        anime.navBU(navBG);
+      }
+    }else{
+      if(scrollY > windowH * 0.9){
+        anime.navBD(navBG);
+      }else if(scrollY <= windowH * 0.9){
+        anime.navBU(navBG);
+      }
+    }
+  
+    // Panel reaction
+    if(scrollY > windowH * 0.7){
+      anime.panelOpen(aboutPanel);
+      anime.panelOpen(aboutProfile);
+      anime.switchShow(switchLang);
+    }else if(scrollY <= windowH * 0.3){
+      anime.panelClose(aboutPanel);
+      anime.panelClose(aboutProfile);
+      anime.switchHide(switchLang);
+    }
+  
+    // Bar Lengthening
+    if(scrollY > windowH * 1.1){
+      anime.barLengthen(progressBar1, progressBar2, progressBar3, progressBar4, progressBar5, progressBar6);
+    }
+  
+    // Typing Message /////////////////////
+    let m1 = 'What I can do is';
+    let m2 = 'Making news websites,';
+    let m3 = 'Desktop apps,';
+    let m4 = 'Fun RPG games,';
+    let m5 = 'and so on...';
+    let tM = threeM.textContent;
+    
+  
+    if(scrollY == 0){
+      threeM.textContent = m1;
+    }
+    if(windowW > 500){
+      if(scrollY <= windowH + 1100 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m1, 100);
+      }else if(scrollY > windowH + 1100 && scrollY <= windowH + 1400 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m2, 70);
+      }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1700 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
+        type.effect(threeM, m3, 100);
+      }else if(scrollY > windowH + 1700 && scrollY <= windowH + 1900 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
+        type.effect(threeM, m4, 100);
+      }else if(scrollY > windowH + 1900 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
+        type.effect(threeM, m5, 100);
+      }
+  
+    }else if(windowW <= 500){
+      if(scrollY <= windowH + 1200 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m1, 100);
+      }else if(scrollY > windowH + 1200 && scrollY <= windowH + 1500 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m2, 70);
+      }else if(scrollY > windowH + 1700 && scrollY <= windowH + 2100 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
+        type.effect(threeM, m3, 100);
+      }else if(scrollY > windowH + 2100 && scrollY <= windowH + 2500 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
+        type.effect(threeM, m4, 100);
+      }else if(scrollY > windowH + 2500 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
+        type.effect(threeM, m5, 100);
+      }
+    }
+    
+  
+    // Open Work 1-3
+    if(scrollY > windowH + 900){
+      anime.panelNoTopOpen(work1);
+    }
+    if(scrollY > windowH + 1350){
+      anime.panelNoTopOpen(work2);
+    }
+    if(scrollY > windowH + 1600){
+      anime.panelNoTopOpen(work3);
+    }
+    // Close work 1-3
+    if(scrollY == 0){
+      anime.panelNoTopClose(work1);
+      anime.panelNoTopClose(work2);
+      anime.panelNoTopClose(work3);
+    }
+  
+    // Scroll objects in different speed //////////
+    if(windowW > 500){
+  
+      if(scrollY > windowH * 2.6){
+        let range = scrollY - windowH * 2.5;
+        work1.style.top = -100 - range / 10 + 'px';
+      }
+      if(scrollY > windowH * 3.1){
+        let range = scrollY - windowH * 3;
+        work2.style.top = 300 - range / 2 + 'px';
+      }
+      if(scrollY > windowH * 3.2){
+        let range = scrollY - windowH * 3.6;
+        work3.style.top = 500 - range / 1.5 + 'px';
+      }
+      // Move messages to the sides 
+      if(windowW < 500){
+        threeM.style.left = "0";
+      }else{
+  
+        if(scrollY <= windowH + 1100){
+          threeM.style.left = 0;
+        }else if(scrollY > windowH + 1100 && scrollY <= windowH + 1400){
+          threeM.style.left = '25vw';
+        }else if(scrollY > windowH + 1400 && scrollY <= windowH + 1700){
+          threeM.style.left = '-20vw';
+        }else if(scrollY > windowH + 1700 && scrollY <= windowH + 1900){
+          threeM.style.left = '25vw';
+        }else if(scrollY > windowH + 1900){
+          threeM.style.left = 0;
+        }
+      }
+    }
+
   }else{
-    if(scrollY > windowH * 0.9){
-      anime.navBD(navBG);
-    }else if(scrollY <= windowH * 0.9){
-      anime.navBU(navBG);
-    }
-  }
-
-  // Panel reaction
-  if(scrollY > windowH * 0.7){
-    anime.panelOpen(aboutPanel);
-    anime.panelOpen(aboutProfile);
-    anime.switchShow(switchLang);
-  }else if(scrollY <= windowH * 0.3){
-    anime.panelClose(aboutPanel);
-    anime.panelClose(aboutProfile);
-    anime.switchHide(switchLang);
-  }
-
-  // Bar Lengthening
-  if(scrollY > windowH * 1.1){
-    anime.barLengthen(progressBar1, progressBar2, progressBar3, progressBar4, progressBar5, progressBar6);
-  }
-
-  // Typing Message /////////////////////
-  let m1 = 'What I can do is';
-  let m2 = 'Making news websites,';
-  let m3 = 'Desktop apps,';
-  let m4 = 'Fun RPG games,';
-  let m5 = 'and so on...';
-  let tM = threeM.textContent;
+    // For normal window //////////
+    if(scrollY >= windowH / 5 * 25 && scrollY <= windowH / 5 * 26){
   
-
-  if(scrollY == 0){
-    threeM.textContent = m1;
-  }
-  if(window.innerWidth > 500){
-    if(scrollY <= windowH * 2.8 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
-      type.effect(threeM, m1, 100);
-    }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
-      type.effect(threeM, m2, 70);
-    }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 3.9 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
-      type.effect(threeM, m3, 100);
-    }else if(scrollY > windowH * 3.9 && scrollY <= windowH * 4.3 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
-      type.effect(threeM, m4, 100);
-    }else if(scrollY > windowH * 4.3 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
-      type.effect(threeM, m5, 100);
-    }
-
-  }else if(window.innerWidth <= 500){
-    if(scrollY <= windowH * 2.8 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
-      type.effect(threeM, m1, 100);
-    }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
-      type.effect(threeM, m2, 70);
-    }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 4.2 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
-      type.effect(threeM, m3, 100);
-    }else if(scrollY > windowH * 4.2 && scrollY <= windowH * 4.7 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
-      type.effect(threeM, m4, 100);
-    }else if(scrollY > windowH * 4.7 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
-      type.effect(threeM, m5, 100);
-    }
-  }
+      let range = windowH / 5;
+      let x = scrollY - windowH / 5 * 25;
   
-
-  // Open Work 1-3
-  if(scrollY > windowH * 2.0){
-    anime.panelNoTopOpen(work1);
-  }
-  if(scrollY > windowH * 2.9){
-    anime.panelNoTopOpen(work2);
-  }
-  if(scrollY > windowH * 3.7){
-    anime.panelNoTopOpen(work3);
-  }
-  // Close work 1-3
-  if(scrollY == 0){
-    anime.panelNoTopClose(work1);
-    anime.panelNoTopClose(work2);
-    anime.panelNoTopClose(work3);
-  }
-
-  // Scroll objects in different speed //////////
-  if(window.innerWidth > 500){
-
-    if(scrollY > windowH * 2.6){
-      let range = scrollY - windowH * 2.5;
-      work1.style.top = -100 - range / 10 + 'px';
+      circleBox.style.opacity = x / range;
+      circle.style.opacity = x / range;
+      circleBox.style.display = 'flex';
+  
+      circleLayer.style.display = 'block';
+  
+      // invisible nav bar cursor change
+      inNavBar.style.cursor = "none";
+      // inNavBar.style.display = "flex";
+  
+    }else if(scrollY > windowH / 5 * 26){
+  
+      circleBox.style.cursor = 'none';
+      circleBox.style.opacity = 1;
+      circle.style.opacity = 1;
+  
+      qr.style.cursor = 'none';
+    }else if(scrollY < windowH / 5 * 25){
+      circleBox.style.display = 'none';
+      circleBox.style.cursor = 'normal';
+  
+      circleLayer.style.display = 'none';
+  
+      // invisible nav bar cursor change
+      inNavBar.style.cursor = "default";
+      // inNavBar.style.display = "none";
     }
-    if(scrollY > windowH * 3.1){
-      let range = scrollY - windowH * 3;
-      work2.style.top = 300 - range / 3 + 'px';
+  
+    // Header Photo scroll
+    let scrollL = scrollY / 3;
+    photo.style.top = -scrollL + 'px';
+    
+    // Nav background Animation
+    if(windowW < 500){
+      if(scrollY > windowH * 0.1){
+        anime.navBD(navBG);
+      }else if(scrollY <= windowH * 0.1){
+        anime.navBU(navBG);
+      }
+    }else{
+      if(scrollY > windowH * 0.9){
+        anime.navBD(navBG);
+      }else if(scrollY <= windowH * 0.9){
+        anime.navBU(navBG);
+      }
     }
-    if(scrollY > windowH * 3.2){
-      let range = scrollY - windowH * 3.6;
-      work3.style.top = 500 - range / 1.5 + 'px';
+  
+    // Panel reaction
+    if(scrollY > windowH * 0.7){
+      anime.panelOpen(aboutPanel);
+      anime.panelOpen(aboutProfile);
+      anime.switchShow(switchLang);
+    }else if(scrollY <= windowH * 0.3){
+      anime.panelClose(aboutPanel);
+      anime.panelClose(aboutProfile);
+      anime.switchHide(switchLang);
     }
-    // Move messages to the sides 
-    if(scrollY <= windowH * 2.8){
-      threeM.style.left = 0;
-    }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5){
-      threeM.style.left = '25vw';
-    }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 3.9){
-      threeM.style.left = '-20vw';
-    }else if(scrollY > windowH * 3.9 && scrollY <= windowH * 4.3){
-      threeM.style.left = '25vw';
-    }else if(scrollY > windowH * 4.3){
-      threeM.style.left = 0;
+  
+    // Bar Lengthening
+    if(scrollY > windowH * 1.1){
+      anime.barLengthen(progressBar1, progressBar2, progressBar3, progressBar4, progressBar5, progressBar6);
+    }
+  
+    // Typing Message /////////////////////
+    let m1 = 'What I can do is';
+    let m2 = 'Making news websites,';
+    let m3 = 'Desktop apps,';
+    let m4 = 'Fun RPG games,';
+    let m5 = 'and so on...';
+    let tM = threeM.textContent;
+    
+  
+    if(scrollY == 0){
+      threeM.textContent = m1;
+    }
+    if(windowW > 500){
+      if(scrollY <= windowH * 2.8 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m1, 100);
+      }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m2, 70);
+      }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 3.9 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
+        type.effect(threeM, m3, 100);
+      }else if(scrollY > windowH * 3.9 && scrollY <= windowH * 4.3 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
+        type.effect(threeM, m4, 100);
+      }else if(scrollY > windowH * 4.3 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
+        type.effect(threeM, m5, 100);
+      }
+  
+    }else if(windowW <= 500){
+      if(scrollY <= windowH * 2.8 && (tM == m2 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m1, 100);
+      }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5 && (tM == m1 || tM == m3 || tM == m4 || tM == m5)){
+        type.effect(threeM, m2, 70);
+      }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 4.2 && (tM == m1 || tM == m2 || tM == m4 || tM == m5)){
+        type.effect(threeM, m3, 100);
+      }else if(scrollY > windowH * 4.2 && scrollY <= windowH * 4.7 &&(tM == m1 || tM == m2 || tM == m3 || tM == m5)){
+        type.effect(threeM, m4, 100);
+      }else if(scrollY > windowH * 4.7 && (tM == m1 || tM == m2 || tM == m3 || tM == m4)){
+        type.effect(threeM, m5, 100);
+      }
+    }
+    
+  
+    // Open Work 1-3
+    if(scrollY > windowH * 2.0){
+      anime.panelNoTopOpen(work1);
+    }
+    if(scrollY > windowH * 2.9){
+      anime.panelNoTopOpen(work2);
+    }
+    if(scrollY > windowH * 3.7){
+      anime.panelNoTopOpen(work3);
+    }
+    // Close work 1-3
+    if(scrollY == 0){
+      anime.panelNoTopClose(work1);
+      anime.panelNoTopClose(work2);
+      anime.panelNoTopClose(work3);
+    }
+  
+    // Scroll objects in different speed //////////
+    if(windowW > 500){
+  
+      if(scrollY > windowH * 2.6){
+        let range = scrollY - windowH * 2.5;
+        work1.style.top = -100 - range / 10 + 'px';
+      }
+      if(scrollY > windowH * 3.1){
+        let range = scrollY - windowH * 3;
+        work2.style.top = 300 - range / 3 + 'px';
+      }
+      if(scrollY > windowH * 3.2){
+        let range = scrollY - windowH * 3.6;
+        work3.style.top = 500 - range / 1.5 + 'px';
+      }
+      // Move messages to the sides 
+      if(windowW < 500){
+        threeM.style.left = "0";
+      }else{
+  
+        if(scrollY <= windowH * 2.8){
+          threeM.style.left = 0;
+        }else if(scrollY > windowH * 2.8 && scrollY <= windowH * 3.5){
+          threeM.style.left = '25vw';
+        }else if(scrollY > windowH * 3.5 && scrollY <= windowH * 3.9){
+          threeM.style.left = '-20vw';
+        }else if(scrollY > windowH * 3.9 && scrollY <= windowH * 4.3){
+          threeM.style.left = '25vw';
+        }else if(scrollY > windowH * 4.3){
+          threeM.style.left = 0;
+        }
+      }
     }
   }
 
@@ -419,7 +588,19 @@ qr.addEventListener('mouseleave', function(){
 
 
 window.onresize = function windowSize(){
+  if(window.innerWidth < 500){
+    work1.style.top = '-200px';
+    work2.style.top = '5px';
+    work3.style.top = '350px';
+  }
+
+  console.log(work1.style.top);
+  console.log(work2.style.top);
+  console.log(work3.style.top);
   windowH = window.innerHeight;
   windowW = window.innerWidth;
+
+
+  threeM.style.left = "0";
 }
 

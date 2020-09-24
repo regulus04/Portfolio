@@ -918,42 +918,35 @@ img {
       font-size: 1rem;
       text-align: left; } }
 
-@media (max-height: 700px) {
-  #main-container #about-container {
-    margin-bottom: 0rem; }
-    #main-container #about-container #about-profile {
-      height: 350px; }
-      #main-container #about-container #about-profile #about-photo {
-        height: 100px; }
-      #main-container #about-container #about-profile #about-texts {
-        height: 200px; }
-    #main-container #about-container #about-bars-container {
-      height: 40vh; }
-      #main-container #about-container #about-bars-container #about-b {
-        padding-top: 0;
-        padding-bottom: 0; }
-      #main-container #about-container #about-bars-container .progress {
-        height: 10px;
-        margin-bottom: 0.1rem; }
-      #main-container #about-container #about-bars-container h4 {
-        font-size: 0.8rem; }
+@media (max-width: 340px) {
+  #main-container #section-1 #header-home .container .header-content h1 {
+    font-size: 2.5rem; }
   #main-container #section-2 {
     font-size: 2.5rem; }
-  #main-container #section-3 #work-1, #main-container #section-3 #work-2, #main-container #section-3 #work-3 {
-    width: 60vw;
-    left: 20vw; }
-  #main-container #section-3 #work-1 {
-    top: -200px; }
-  #main-container #section-3 #work-2 {
-    top: 0px; }
-  #main-container #section-3 #work-3 {
-    top: 250px; }
   #main-container #section-4 #second-layer {
-    font-size: 2.5rem; } }
+    font-size: 2rem; } }
+
+@media (max-height: 700px) {
+  #main-container #about-container {
+    height: 980px; }
+  #main-container #section-2 {
+    font-size: 2.5rem; }
+  #main-container #section-3 {
+    height: 1400px; }
+  #main-container #section-4 {
+    height: 600px; } }
 
 @media (max-height: 580px) {
   #header-home .header-content {
     padding-top: 3rem; } }
+
+@media (max-height: 420px) {
+  #main-container #section-1 #header-home .container .header-content h1 {
+    font-size: 3rem; }
+  #main-container #section-2 {
+    font-size: 2.8rem; }
+  #main-container #section-4 #second-layer {
+    font-size: 2.5rem; } }
 
 @media (max-height: 370px) {
   #header-home .header-content h1 {
