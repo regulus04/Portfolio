@@ -830,7 +830,8 @@ img {
     display: none; }
   #contact-a .text-fields {
     grid-template-areas: 'name' 'subject' 'email' 'phone' 'message';
-    width: 80vw; }
+    width: 80vw;
+    overflow: hidden; }
   #contact-b div {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
