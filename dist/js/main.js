@@ -590,6 +590,16 @@ qr.addEventListener('mouseleave', function(){
   innerBox1.style.left = '-10px';
 });
 
+// Open link on new tab //////
+// work1.addEventListener('click', () => {
+//   window.open('https://gifted-almeida-9a2621.netlify.app/');
+// });
+// work2.addEventListener('click', () => {
+//   window.open('https://thirsty-tereshkova-dc810d.netlify.app/');
+// });
+// work3.addEventListener('click', () => {
+//   window.open('https://serene-euclid-ef49aa.netlify.app/');
+// });
 
 
 
