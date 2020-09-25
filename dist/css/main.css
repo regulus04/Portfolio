@@ -593,7 +593,7 @@ img {
           transform: rotate(45deg);
           transition: width 0.2s, height 0.2s, opacity 0.2s; }
     #main-container #section-4 #qr-code {
-      background: url(../img/qr.png) center center/cover;
+      background: url(../img/qrpf.png) center center/cover;
       width: 100px;
       height: 100px;
       position: relative;
