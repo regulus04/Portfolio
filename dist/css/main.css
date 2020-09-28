@@ -833,8 +833,9 @@ img {
   #about-c {
     display: none; }
   #contact-a .text-fields {
-    grid-template-areas: 'name' 'subject' 'email' 'phone' 'message';
-    width: 80vw; }
+    grid-template-areas: 'name' 'subject' 'email' 'phone' 'message'; }
+    #contact-a .text-fields input, #contact-a .text-fields textarea {
+      width: 80%; }
   #contact-b div {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
