@@ -103,11 +103,17 @@ document.body.addEventListener('mousemove', mouse);
 function mouse(e){
   mouseX = e.clientX;
   mouseY = e.clientY;
+
+  circleBox.style.transform = `translate3d(${mouseX - 125}px, ${mouseY - 125}px, 0px)`;
+}
+// document.body.addEventListener('mousemove', (e) => {
+//   mouseX = e.clientX;
+//   mouseY = e.clientY;
   
 
-  circleBox.style.top = `${mouseY - 125}px`;
-  circleBox.style.left = `${mouseX - 125}px`;
-}
+//   circleBox.style.top = `${mouseY - 125}px`;
+//   circleBox.style.left = `${mouseX - 125}px`;
+// });
 
 // Scroll event /////////////////////////////////////
 window.addEventListener('scroll', scroll);
