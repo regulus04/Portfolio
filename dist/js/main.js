@@ -8,6 +8,10 @@ import { Animation } from './Animation.js';
 // mobile
 
 
+// submit button without input
+// about me scroll position
+// footer cursor
+
 const navBG = document.querySelector('#nav-background');
 const circleLayer = document.querySelector('#circle-layer');
 const circleBox = document.querySelector('#circle-box');
