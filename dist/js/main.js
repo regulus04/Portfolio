@@ -95,6 +95,8 @@ function scrollToAbout(e){
 }
 
 
+// var userAgent = window.navigator.userAgent;
+
 
 // Circle mix-blend-mode ///////////////////
 document.body.addEventListener('mousemove', mouse);
@@ -594,17 +596,6 @@ qr.addEventListener('mouseleave', function(){
   innerBox1.style.left = '-10px';
 });
 
-// Open link on new tab //////
-// work1.addEventListener('click', () => {
-//   window.open('https://gifted-almeida-9a2621.netlify.app/');
-// });
-// work2.addEventListener('click', () => {
-//   window.open('https://thirsty-tereshkova-dc810d.netlify.app/');
-// });
-// work3.addEventListener('click', () => {
-//   window.open('https://serene-euclid-ef49aa.netlify.app/');
-// });
-
 
 
 window.onresize = function windowSize(){
@@ -620,9 +611,6 @@ window.onresize = function windowSize(){
     work3.style.top = '500px';
   }
 
-  console.log(work1.style.top);
-  console.log(work2.style.top);
-  console.log(work3.style.top);
   windowH = window.innerHeight;
   windowW = window.innerWidth;
 

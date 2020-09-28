@@ -629,13 +629,10 @@ img {
       height: 250px;
       background: white;
       border-radius: 50%;
-      /* z-index: -10 !important; */
       animation-name: circleAnime;
       animation-duration: 1s;
       animation-iteration-count: infinite;
-      animation-timing-function: ease;
-      /* opacity: 0; */
-      /* transition: opacity 0.2s; */ }
+      animation-timing-function: ease; }
 
 #about-a .about-info {
   display: grid;
@@ -834,7 +831,7 @@ img {
     display: none; }
   #contact-a .text-fields {
     grid-template-areas: 'name' 'subject' 'email' 'phone' 'message'; }
-    #contact-a .text-fields input, #contact-a .text-fields textarea, #contact-a .text-fields .my-2 div {
+    #contact-a .text-fields input, #contact-a .text-fields textarea, #contact-a .text-fields .my-2 {
       width: 80%; }
   #contact-b div {
     margin-bottom: 1rem;
