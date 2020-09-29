@@ -151,7 +151,8 @@ function scroll(){
   
     // Header Photo scroll
     let scrollL = scrollY / 3;
-    photo.style.transform = `translate3d(0px, ${-scrollL}px, 0px)`
+    photo.style.top = -scrollL + 'px';
+    // photo.style.transform = `translate3d(0px, ${-scrollL}px, 0px)`
     
     // Nav background Animation
     if(windowW < 500){
