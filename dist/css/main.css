@@ -483,8 +483,7 @@ img {
     font-size: 5rem;
     z-index: 2;
     position: relative;
-    perspective: 1000px;
-    overflow: hidden; }
+    perspective: 1000px; }
     #main-container #section-3 #work-1 {
       width: 40vw;
       height: 50vh;

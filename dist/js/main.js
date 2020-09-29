@@ -86,8 +86,6 @@ let windowH = window.innerHeight;
 let windowW = window.innerWidth;
 
 
-window.scrollTo({ top: 0, behavior: 'auto'});
-
 // Navbar About /////
 // Scroll to About part
 
