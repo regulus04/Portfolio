@@ -85,6 +85,9 @@ let mouseY;
 let windowH = window.innerHeight;
 let windowW = window.innerWidth;
 
+
+window.scrollTo({ top: 0, behavior: 'auto'});
+
 // Navbar About /////
 // Scroll to About part
 
@@ -95,9 +98,8 @@ function scrollToAbout(e){
   window.scrollTo({ top: windowH * 1, behavior: 'smooth' });
 }
 
-
+// Check users browser
 // var userAgent = window.navigator.userAgent;
-
 
 // Circle mix-blend-mode ///////////////////
 document.body.addEventListener('mousemove', mouse);
@@ -107,14 +109,6 @@ function mouse(e){
 
   circleBox.style.transform = `translate3d(${mouseX - 125}px, ${mouseY - 125}px, 0px)`;
 }
-// document.body.addEventListener('mousemove', (e) => {
-//   mouseX = e.clientX;
-//   mouseY = e.clientY;
-  
-
-//   circleBox.style.top = `${mouseY - 125}px`;
-//   circleBox.style.left = `${mouseX - 125}px`;
-// });
 
 // Scroll event /////////////////////////////////////
 window.addEventListener('scroll', scroll);
