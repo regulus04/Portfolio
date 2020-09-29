@@ -86,9 +86,10 @@ let windowH = window.innerHeight;
 let windowW = window.innerWidth;
 
 
+window.onbeforeunload = function () { window.scrollTo(0,0)};
+
 // Navbar About /////
 // Scroll to About part
-
 aboutMe.addEventListener('click', scrollToAbout, false);
 // invisibleHome.addEventListener('click', scrollToAbout, false);
 function scrollToAbout(e){
