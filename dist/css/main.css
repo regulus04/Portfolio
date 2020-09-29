@@ -724,7 +724,7 @@ img {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: 'name email' 'subject phone' 'message message';
+  grid-template-areas: 'name email' 'subject phone' 'message message' 'captcha captcha';
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-a .text-fields .name-input {
@@ -741,7 +741,7 @@ img {
   #contact-a .text-fields .text-input {
     padding: 0.5rem 1rem; }
   #contact-a .text-fields .my-2 {
-    width: 50%; }
+    grid-area: captcha; }
 
 #contact-a button[type='submit'] {
   width: 50%; }
