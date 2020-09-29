@@ -46,6 +46,15 @@ const SCM1 = document.querySelector('#scroll-message-1');
 const SCM2 = document.querySelector('#scroll-message-2');
 const SCM3 = document.querySelector('#scroll-message-3');
 const widthCheck = document.querySelector('#width-check');
+
+// contact
+const conName = document.querySelector('.name-input');
+const conSubject = document.querySelector('.subject-input');
+const conEmail = document.querySelector('.email-input');
+const conPhone = document.querySelector('.phone-input');
+const conMessage = document.querySelector('.message-input');
+const submitBtn = document.querySelector('#submit-button');
+
 // Navbar
 const inNavBar = document.querySelector('#main-nav-invisible');
 const home = document.querySelector('#home');
@@ -602,7 +611,18 @@ qr.addEventListener('mouseleave', function(){
   innerBox1.style.left = '-10px';
 });
 
+// Contact form /////////
+conName.value = 'hello';
 
+function check(){
+  alert('are you serious??');
+  return false;
+}
+
+// submitBtn.addEventListener('click', (e) => {
+
+//   e.preventDefault();
+// });
 
 window.onresize = function windowSize(){
   if(window.innerWidth < 500){

@@ -39,7 +39,7 @@
       <h2 class="section-title-black">Contact Me</h2>
       <div class="bottom-line"></div>
       <p class="lead">Here is how you can reach me</p>
-      <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+      <form method="POST" data-netlify="true" data-netlify-recaptcha="true" onsubmit="return check();">
         <div class="text-fields">
           <input
             type="text"
@@ -74,7 +74,7 @@
             <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
-        <button type="submit" class="btn-dark">Submit</button>
+        <button id="submit-button" type="submit" class="btn-dark">Submit</button>
       </form>
     </div>
   </section>
