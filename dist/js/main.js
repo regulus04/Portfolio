@@ -91,10 +91,15 @@ window.onbeforeunload = function () { window.scrollTo(0,0)};
 // Navbar About /////
 // Scroll to About part
 aboutMe.addEventListener('click', scrollToAbout, false);
-// invisibleHome.addEventListener('click', scrollToAbout, false);
 function scrollToAbout(e){
   e.preventDefault();
-  window.scrollTo({ top: windowH * 1, behavior: 'smooth' });
+  if(windowW < 500){
+    window.scrollTo({ top: windowH - 110, behavior: 'smooth' });
+  }else if(windowW > 500 && windowH < 700){
+    window.scrollTo({ top: windowH - 100, behavior: 'smooth' });
+  }else{
+    window.scrollTo({ top: windowH * 1, behavior: 'smooth' });
+  }
 }
 
 // Check users browser
@@ -152,7 +157,7 @@ function scroll(){
     // Header Photo scroll
     let scrollL = scrollY / 3;
     photo.style.top = -scrollL + 'px';
-    // photo.style.transform = `translate3d(0px, ${-scrollL}px, 0px)`
+    // photo.style.transform = `translate3d(0px, ${-scrollL}px, 0px)`;
     
     // Nav background Animation
     if(windowW < 500){
@@ -162,9 +167,9 @@ function scroll(){
         anime.navBU(navBG);
       }
     }else{
-      if(scrollY > windowH * 0.9){
+      if(scrollY > windowH * 0.6){
         anime.navBD(navBG);
-      }else if(scrollY <= windowH * 0.9){
+      }else if(scrollY <= windowH * 0.6){
         anime.navBU(navBG);
       }
     }
@@ -314,6 +319,7 @@ function scroll(){
     // Header Photo scroll
     let scrollL = scrollY / 3;
     photo.style.top = -scrollL + 'px';
+    // photo.style.transform = `translate3d(0px, ${-scrollL}px, 0px)`;
     
     // Nav background Animation
     if(windowW < 500){
