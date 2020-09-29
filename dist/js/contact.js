@@ -6,6 +6,12 @@ const conPhone = document.querySelector('.phone-input');
 const conMessage = document.querySelector('.message-input');
 const submitBtn = document.querySelector('#submit-button');
 
+// footer 
+const mainFooter = document.querySelector('#main-footer');
+
+// footer cursor
+mainFooter.style.cursor = 'default';
+
 // Contact form /////////
 function check(){
   if(conName.value == '' || conSubject.value == '' || conName.Email == '' || conPhone.value == '' || conMessage.value == ''){
