@@ -798,6 +798,12 @@ img {
   #section-3 .item-text-category {
     font-size: 0.8rem; } }
 
+@media (max-width: 700px) {
+  #english-profile {
+    font-size: 0.8rem; }
+  #japanese-profile {
+    font-size: 0.8rem; } }
+
 @media (max-width: 500px) {
   #work-main-nav, #main-nav, #main-nav-invisible {
     flex-direction: column;

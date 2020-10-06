@@ -60,9 +60,9 @@ export class Animation {
   barLengthen(target1, target2, target3, target4, target5, target6){
     target1.style.width = "100%";
     target2.style.width = "90%";
-    target3.style.width = "80%";
+    target3.style.width = "60%";
     target4.style.width = "80%";
-    target5.style.width = "40%";
+    target5.style.width = "80%";
     target6.style.width = "100%";
   }
 
